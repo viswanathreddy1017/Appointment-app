@@ -8,7 +8,7 @@ export const dbConnection = () => {
         .then(() => {
             console.log('MongoDB Connected');
         })
-        .catch(err => {
-            console.log('Some error occurred while connecting to db: ${err}');
+        .catch((err) => {
+            console.log('Some error occurred while connecting to db:', err);
         });
 };

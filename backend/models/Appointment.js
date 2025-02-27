@@ -19,7 +19,7 @@ const appointmentSchema = new mongoose.Schema({
     },
     hasVisited: { type: Boolean, default: false },
     professorId: { type: mongoose.Schema.ObjectId, required: true },
-    studentId: { type: mongoose.Schema.ObjectId, required: true },
+    studentId: { type: mongoose.Schema.ObjectId,ref: "User", required: true },
     reason: { type: String, required: true },
     status: { type: String, enum: ["Pending", "Accepted", "Rejected"], default: "Pending" },
     });

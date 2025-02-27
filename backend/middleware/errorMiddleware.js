@@ -12,24 +12,24 @@ export const errorMiddleware = (err, req, res, next) => {
 
     if(err.code === 11000){
         const message = `Duplicate ${Object.keys(err.keyValue)} entered`;
-        err = new ErrorHAndler(message, 400);
+        err = new ErrorHandler(message, 400);
     }
     if (err.name === "JsonWebTokenError") {
             const message = "JsonWebToken is invalid. Try again!";
-            err = new ErrorHAndler(message, 400);
+            err = new ErrorHandler(message, 400);
         }
     if(err.name === "TokenExpiredError"){
         const message = "JsonWebToken is expired. Try again!";
-        err = new ErrorHAndler(message, 400);
+        err = new ErrorHandler(message, 400);
     }
     if ( err.name === "CastError"){
         const message = `Invalid ${err.path}`;
-        err = new ErrorHAndler(message, 400);
+        err = new ErrorHandler(message, 400);
     }
     const errorMessage = err.errors
         ? Object.values(err.errors)
-            .map(error=> error.message)
-                .join("")
+            .map((error) => error.message)
+                .join(" ")
         : err.message;
 
     return res.status(err.statusCode).json({

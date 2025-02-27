@@ -36,7 +36,7 @@ export const login= catchAsyncErrors(async (req, res, next) => {
     if(role !== user.role){
         return next(new ErrorHandler("Invalid Role", 401));
     }
-    generateToken(user, "User logged in successfully", 200, res);
+    generateToken(user, "User logged in successfully", 201, res);
 });
 
 export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
@@ -115,7 +115,7 @@ export const addNewProfessor = catchAsyncErrors(async (req, res, next) => {
     if(!cloudinaryResponse || cloudinaryResponse.error){
         console.error("Cloudinary Error:", cloudinaryResponse.error || "Unkown Cloudinary Error");
         return next(
-            new ErrorHandler("Failed To Upload Doctor Avatar To Cloudinary", 500)
+            new ErrorHandler("Failed To Upload Professor Avatar To Cloudinary", 500)
           );
     }
     const professor = await User.create({
