@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Appointment from "./pages/Appointment";
@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import axios from "axios";
@@ -50,6 +50,7 @@ const App = () => {
           </Routes>
           <Footer />
           <ToastContainer position ="top-center"/>
+          <toast position ="top-center"/>
         </Router>
       </>
 

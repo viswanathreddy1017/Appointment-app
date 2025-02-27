@@ -11,7 +11,7 @@ const AppointmentForm = () => {
   const [bannerId, setBannerId] = useState("");
   const [gender, setGender] = useState("");
   const [appointmentDate, setAppointmentDate] = useState("");
-  const [department, setDepartment] = useState("Pediatrics");
+  const [department, setDepartment] = useState("SoftwareDe");
   const [professorFirstName, setProfessorFirstName] = useState("");
   const [professorLastName, setProfessorLastName] = useState("");
   const [reason, setReason] = useState("");

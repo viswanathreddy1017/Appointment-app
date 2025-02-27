@@ -11,6 +11,7 @@ const MessageForm = () => {
 
   const handleMessage = async (e) => {
     e.preventDefault();
+    console.log("Form Submitted");
     try {
       await axios
         .post(
