@@ -14,6 +14,7 @@ const Register = () => {
   const [bannerId, setBannerId] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigateTo = useNavigate();
 
@@ -40,6 +41,7 @@ const Register = () => {
           setBannerId("");
           setGender("");
           setPassword("");
+          setConfirmPassword
         });
     } catch (error) {
       toast.error(error.response.data.message);
@@ -92,27 +94,34 @@ const Register = () => {
             <input
               type="number"
               placeholder="BannerId"
-              value={nic}
-              onChange={(e) => setNic(e.target.value)}
+              value={bannerId}
+              onChange={(e) => setBannerId(e.target.value)}
             />
-            <input
-             // type={"date"}
+           {/* <input
+            //  type={"date"}
              // placeholder="Date of Birth"
-             // value={dob}
+            //  value={dob}
              // onChange={(e) => setDob(e.target.value)}
-            /> 
-          </div>
-          <div>
+            /> */}
             <select value={gender} onChange={(e) => setGender(e.target.value)}>
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
+          </div>
+          <div>
+            
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+            />
+             <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
           <div
