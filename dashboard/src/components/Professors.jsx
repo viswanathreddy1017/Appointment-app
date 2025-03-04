@@ -34,7 +34,7 @@ const Professors = () => {
             return (
               <div className="card">
                 <img
-                  src={element.profAvatar && element.profAvatar.url}
+                  src={element.professorAvatar && element.professorAvatar.url}
                   alt="professor avatar"
                 />
                 <h4>{`${element.firstName} ${element.lastName}`}</h4>

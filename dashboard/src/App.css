@@ -420,7 +420,7 @@ body {
   margin-bottom: 30px;
   font-size: 2.3rem;
 }
-.professors .banner {
+.pofessors .banner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-gap: 20px;
@@ -530,7 +530,7 @@ body {
   position: absolute;
   width: 100%;
 }
-.add-professorr-form form .first-wrapper div:last-child {
+.add-professor-form form .first-wrapper div:last-child {
   flex: 2;
   display: flex;
   gap: 30px;

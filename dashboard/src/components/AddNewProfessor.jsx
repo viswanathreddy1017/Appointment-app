@@ -16,8 +16,8 @@ const AddNewProfessor = () => {
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
   const [professorDepartment, setProfessorDepartment] = useState("");
-  const [profAvatar, setProfAvatar] = useState("");
-  const [profAvatarPreview, setProfAvatarPreview] = useState("");
+  const [professorAvatar, setProfessorAvatar] = useState("");
+  const [professorAvatarPreview, setProfessorAvatarPreview] = useState("");
 
   const navigateTo = useNavigate();
 
@@ -40,8 +40,8 @@ const AddNewProfessor = () => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      setProfAvatarPreview(reader.result);
-      setProfAvatar(file);
+      setProfessorAvatarPreview(reader.result);
+      setProfessorAvatar(file);
     };
   };
 
@@ -58,7 +58,7 @@ const AddNewProfessor = () => {
       //formData.append("dob", dob);
       formData.append("gender", gender);
       formData.append("professorDepartment", professorDepartment);
-      formData.append("profAvatar", profAvatar);
+      formData.append("professorAvatar", professorAvatar);
       await axios
         .post("http://localhost:5000/api/v1/user/professor/addnew", formData, {
           withCredentials: true,
@@ -95,7 +95,7 @@ const AddNewProfessor = () => {
             <div>
               <img
                 src={
-                  profAvatarPreview ? `${profAvatarPreview}` : "/profHolder.jpg"
+                  professorAvatarPreview ? `${professorAvatarPreview}` : "/profHolder.jpg"
                 }
                 alt="Professor Avatar"
               />
