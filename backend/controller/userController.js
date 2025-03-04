@@ -94,10 +94,20 @@ export const logoutStudent= catchAsyncErrors(async (req, res, next) => {
 
 
 export const addNewProfessor = catchAsyncErrors(async (req, res, next) => {
+    console.log("Received Files:", req.files);
+    console.log("Received Request: ", req.body);
     if(!req.files || Object.keys(req.files).length === 0){
         return next(new ErrorHandler("Professor Avatar required", 400));
     }
+     // Check if any file was uploaded
+  //   if (!req.files.profAvatar || !req.files.professorAvatar) {
+    //    return next(new ErrorHandler("Professor Avatar is missing", 400));
+    //}
     const {professorAvatar} = req.files;
+   // console.log("Professor Avatar:", professorAvatar); 
+    //if (!professorAvatar.mimetype) {
+    //    return next(new ErrorHandler("Invalid file format or file missing", 400));
+    //}
     const allowedFormats = ["image/png", "image/jpg", "image/jpeg", "image/webp"];
     if(!allowedFormats.includes(professorAvatar.mimetype)){
         return next(new ErrorHandler("Invalid file format", 400));
@@ -111,7 +121,12 @@ export const addNewProfessor = catchAsyncErrors(async (req, res, next) => {
     if(isRegeistered){
         return next(new ErrorHandler(`${isRegeistered.role} already exists with this email`, 400));
     }
-    const cloudinaryResponse = await cloudinary.uploader.upload(professorAvatar.tempFilePath);
+    try {
+    const cloudinaryResponse = await cloudinary.uploader.upload(professorAvatar.tempFilePath 
+     //   folder: "professors",
+       // width: 300,
+        //crop: "scale",
+);
     if(!cloudinaryResponse || cloudinaryResponse.error){
         console.error("Cloudinary Error:", cloudinaryResponse.error || "Unkown Cloudinary Error");
         return next(
@@ -130,4 +145,8 @@ export const addNewProfessor = catchAsyncErrors(async (req, res, next) => {
         message: "Professor registered successfully",
         professor,
     });
+} catch (error) {
+    console.error("Cloudinary Upload Error:", error);
+    return next(new ErrorHandler("Internal Server Error", 500));
+}
 });

@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true, minLength: [8, "Password must contain atleast 8 characters characters"], select: false },
   role: { type: String, required: true, enum: ["Student", "Admin", "Professor"] }, 
   professorDepartment: {type: String},
-  profAvatar: {public_id:String, url: String},
+  professorAvatar: {public_id:String, url: String},
 });
 
 userSchema.pre("save", async function (next) {
