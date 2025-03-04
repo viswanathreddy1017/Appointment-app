@@ -9,7 +9,7 @@ const Hero = ({title, imageUrl}) => {
             SLU is a R1 Research institute with high quality research
              and excellent teaching methodlogies of  professors.
              In SLU students can learn the practical way of learning.
-             Exceptionally SLU has an open source platform with its provate research institute
+             Exceptionally SLU has an open source platform with its private research institute
              innovating many things
         </p>
         </div>

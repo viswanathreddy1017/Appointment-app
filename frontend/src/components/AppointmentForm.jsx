@@ -167,7 +167,7 @@ const AppointmentForm = () => {
             >
               <option value="">Select Professor</option>
               {professors
-                .filter((professor) => professor.professorrDepartment === department)
+                .filter((professor) => professor.professorDepartment === department)
                 .map((professor, index) => (
                   <option
                     value={`${professor.firstName} ${professor.lastName}`}
