@@ -8,7 +8,7 @@ const Biography = ({imageUrl}) => {
           <img src={imageUrl} alt="aboutImg" />
         </div>
         <div className="banner">
-          <p>Biography</p>
+          <h3>Biography</h3>
           <h3>Who We Are</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -19,7 +19,7 @@ const Biography = ({imageUrl}) => {
             similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
             nesciunt laboriosam totam iusto!
           </p>
-          <p>We are all in 2024!</p>
+          <p>We are all in 2025!</p>
           <p>We are working on a MERN STACK PROJECT.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores

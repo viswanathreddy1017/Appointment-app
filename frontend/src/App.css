@@ -155,8 +155,9 @@ h6 {
 }
 .form-component h2 {
   color: gray;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   margin-bottom: 30px;
+  font-size: 30px;
 }
 .form-component h4 {
   color: gray;
@@ -167,6 +168,7 @@ h6 {
   max-width: 750px;
   color: gray;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 .form-component form {
   display: flex;
@@ -181,8 +183,8 @@ h6 {
 .form-component form select,
 .form-component form textarea {
   flex: 1;
-  font-size: 24px;
-  padding: 10px 10px 10px 40px;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
   border-radius: 7px;
   border: 1px solid gray;
 }
@@ -193,7 +195,7 @@ h6 {
   width: fit-content;
   border: none;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 16px;
   margin-bottom: 30px;
   background: linear-gradient(140deg, #9083d5, #271776ca);
 }
@@ -271,8 +273,8 @@ h6 {
   gap: 10px;
 }
 .biography .banner h3 {
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-weight: 800;
+
 }
 .biography .banner p:first-child {
   font-size: 24px;
@@ -301,7 +303,7 @@ h6 {
 @media (max-width: 700px) {
   .message-form img {
     right: -35%;
-    height: 450px;
+    height: 45px;
     top: 10%;
   }
 }
@@ -322,8 +324,9 @@ footer .content div:nth-child(3) {
   flex: 2;
 }
 footer .content div h4 {
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 footer .content div ul {
   display: flex;
@@ -333,6 +336,7 @@ footer .content div ul {
 footer .content div ul a {
   color: gray;
   text-decoration: none;
+  font-size: 16px;
 }
 footer .content div ul a:hover {
   color: #8570ed;
@@ -340,10 +344,12 @@ footer .content div ul a:hover {
 }
 footer .content div ul li span {
   color: gray;
+  font-size: 16px;
 }
 footer .content div ul li span:first-child {
   width: 150px;
   display: inline-block;
+  font-size: 16px;
 }
 
 footer .content div:last-child div {
@@ -351,9 +357,13 @@ footer .content div:last-child div {
   align-items: center;
   gap: 12px;
   margin-bottom: 10px;
+  font-size: 16px;
+}
+span {
+  font-size: 16px;
 }
 footer .content div:last-child div svg {
-  font-size: 24px;
+  font-size: 14px;
 }
 @media (max-width: 1135px) {
   footer .content {
@@ -365,6 +375,7 @@ footer .content div:last-child div svg {
     flex: none;
     width: 340px;
     margin-bottom: 30px;
+    font-size: 10px;
   }
 }
 @media (max-width: 900px) {
@@ -374,6 +385,7 @@ footer .content div:last-child div svg {
   footer .content div,
   footer .content div:nth-child(3) {
     width: 100%;
+      font-size: 10px;
   }
 }
 @media (max-width: 390px) {
@@ -382,26 +394,26 @@ footer .content div:last-child div svg {
     flex-direction: column;
   }
 }
-
 .departments {
   padding-top: 30px;
   padding-bottom: 50px;
 }
 .departments h2 {
-  color: gray;
-  margin-bottom: 30px;
+  color: rgb(63, 63, 63);
+  margin-bottom: 10px;
+  font-weight: 700;;
 }
 .card {
   position: relative;
-  border-radius: 8px;
+  border-radius: 6px;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   padding-left: 10px;
-  padding-right: 20px;
-  min-height: 360px;
+  padding-right: 10px;
+  min-height: 300px;
   margin: 0 10px;
   text-decoration: none;
 }
@@ -417,7 +429,7 @@ footer .content div:last-child div svg {
   margin-bottom: 30px;
   background: #e5e5e5;
   width: 320px;
-  font-size: 24px;
+  font-size: 16px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
