@@ -72,11 +72,11 @@ const Dashboard = () => {
           </div>
           <div className="secondBox">
             <p>Total Appointments</p>
-            <h3>1500</h3>
+            <h3>666</h3>
           </div>
           <div className="thirdBox">
             <p>Registered Professors</p>
-            <h3>10</h3>
+            <h3>6</h3>
           </div>
         </div>
         <div className="banner">
