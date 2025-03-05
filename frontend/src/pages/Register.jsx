@@ -23,7 +23,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "http://localhost:5000/api/v1/user/student/register",
+          "https://appointment-app-yior.onrender.com/api/v1/user/student/register",
           { firstName, lastName, email, phone, bannerId, gender, password },
           {
             withCredentials: true,

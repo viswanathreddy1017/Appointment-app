@@ -22,7 +22,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/user/student/me",
+          "https://appointment-app-yior.onrender.com/api/v1/user/student/me",
           {
             withCredentials: true,
           }

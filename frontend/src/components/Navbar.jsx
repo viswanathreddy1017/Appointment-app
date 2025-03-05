@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:5000/api/v1/user/student/logout", {
+      .get("https://appointment-app-yior.onrender.com/api/v1/user/student/logout", {
         withCredentials: true,
       })
       .then((res) => {

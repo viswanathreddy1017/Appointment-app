@@ -34,7 +34,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchProfessors = async () => {
       const { data } = await axios.get(
-        "http://localhost:5000/api/v1/user/professors",
+        "https://appointment-app-yior.onrender.com/api/v1/user/professors",
         { withCredentials: true }
       );
       setProfessors(data.professors);
@@ -47,7 +47,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/appointment/post",
+        "https://appointment-app-yior.onrender.com/api/v1/appointment/post",
         {
           firstName,
           lastName,

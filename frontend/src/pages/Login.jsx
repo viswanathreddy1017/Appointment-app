@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "http://localhost:5000/api/v1/user/login",
+          "https://appointment-app-yior.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Student" },
           {
             withCredentials: true,
