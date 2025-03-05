@@ -11,7 +11,7 @@ const Professors = () => {
     const fetchProfessors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/v1/user/professors",
+          "https://appointment-app-yior.onrender.com/api/v1/user/professors",
           { withCredentials: true }
         );
         setProfessors(data.professors);

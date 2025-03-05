@@ -60,7 +60,7 @@ const AddNewProfessor = () => {
       formData.append("professorDepartment", professorDepartment);
       formData.append("professorAvatar", professorAvatar);
       await axios
-        .post("http://localhost:5000/api/v1/user/professor/addnew", formData, {
+        .post("https://appointment-app-yior.onrender.com/api/v1/user/professor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
