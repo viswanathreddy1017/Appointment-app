@@ -14,7 +14,11 @@ const Dashboard = () => {
       try {
         const { data } = await axios.get(
           "https://appointment-app-yior.onrender.com/api/v1/appointment/getall",
-          { withCredentials: true }
+          { withCredentials: true,
+            headers: { 
+              Authorization: `Bearer ${document.cookie.split('=')[1]}` // ✅ Extract token from cookies
+            }
+           }
         );
         setAppointments(data.appointments);
       } catch (error) {
