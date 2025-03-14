@@ -6,7 +6,7 @@ import { isAdminAuthenticated, isStudentAuthenticated } from '../middleware/auth
 const router = express.Router();
 router.post("/student/register", studentRegister);
 router.post("/login", login);
-router.post("/admin/addnew", addNewAdmin);
+router.post("/admin/addnew", isAdminAuthenticated, addNewAdmin);
 router.get("/professors",  getAllProfessors);
 router.get("/admin/me", isAdminAuthenticated, getUserDetails);
 router.get("/student/me", isStudentAuthenticated, getUserDetails);
