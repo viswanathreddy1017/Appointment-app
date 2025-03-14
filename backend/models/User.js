@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import validator from "validator";
-import bcryptjs from "bcryptjs";  
+import bcrypt from "bcrypt";  
 import jwt from "jsonwebtoken";
 
 const userSchema = new mongoose.Schema({
@@ -20,11 +20,11 @@ userSchema.pre("save", async function (next) {
   if(!this.isModified("password")){
     next();
   }
-  this.password = await bcryptjs.hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);
 });
 
 userSchema.methods.comparePassword = async function(enteredPassword){
-  return await bcryptjs.compare(enteredPassword, this.password);
+  return await bcrypt.compare(enteredPassword, this.password);
 };
 
 userSchema.methods.generateJsonWebToken = function(){
