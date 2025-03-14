@@ -1,8 +1,4 @@
 node_modules
-<<<<<<< HEAD
 backend/config.env
 .qodo
-=======
 backend/config/config.env
-backend/config.env
->>>>>>> cadd1ce9b000ee430e9c7d4733c842df45f3b1dc
