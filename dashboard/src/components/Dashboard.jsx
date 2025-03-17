@@ -58,7 +58,7 @@ const Dashboard = () => {
       <section className="dashboard page">
         <div className="banner">
           <div className="firstBox">
-            <img src="/prof.png" alt="profImg" />
+            <img src="/prof.jpg" alt="profImg" />
             <div className="content">
               <div>
                 <p>Hello ,</p>
