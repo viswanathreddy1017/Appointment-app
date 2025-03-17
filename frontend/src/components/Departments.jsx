@@ -9,19 +9,19 @@ const Departments = () => {
       imageUrl: "/departments/AdvSoftware.jpg",
     },
     {
-      name: "biology",
+      name: "Biology",
       imageUrl: "/departments/biology.jpg",
     },
     {
-      name: "communication",
+      name: "Communication",
       imageUrl: "/departments/communication.jpg",
     },
     {
-      name: "forensic",
+      name: "Forensic",
       imageUrl: "/departments/forensic.jpg",
     },
     {
-      name: "health_care",
+      name: "Health_care",
       imageUrl: "/departments/health_care.jpg",
     },
     {

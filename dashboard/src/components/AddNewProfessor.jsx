@@ -23,15 +23,15 @@ const AddNewProfessor = () => {
 
   const departmentsArray = [
     "AdvSoftware",
-    "biology",
-    "communication",
+    "Biology",
+    "Communication",
     "Neurology",
-    "forensic",
-    "health_care",
+    "Forensic",
+    "Health_care",
     "History",
     "Java",
     "Math",
-    "psychology",
+    "Psychology",
     "SoftwareDe",
   ];
 

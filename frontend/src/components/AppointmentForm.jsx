@@ -19,15 +19,16 @@ const AppointmentForm = () => {
 
   const departmentsArray = [
     "AdvSoftware",
-    "biology",
-    "communication",
+    "Biology",
+    "Communication",
+    "Neurology",
     "Forensic",
-    "Health Care ",
+    "Health_care",
     "History",
-    "Java ",
+    "Java",
     "Math",
     "Psychology",
-    "SoftwareDe"
+    "SoftwareDe",
   ];
 
   const [professors, setProfessors] = useState([]);
