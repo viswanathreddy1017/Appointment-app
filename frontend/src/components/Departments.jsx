@@ -37,7 +37,7 @@ const Departments = () => {
       imageUrl: "/departments/Math.jpg",
     },
     {
-      name: "psychology",
+      name: "Psychology",
       imageUrl: "/departments/psychology.jpg",
     },
     {
