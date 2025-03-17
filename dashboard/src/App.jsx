@@ -26,9 +26,11 @@ const App = () => {
             withCredentials: true,
           }
         );
+        console.log("Admin data:", response.data.user);
         setIsAuthenticated(true);
         setUser(response.data.user);
       } catch (error) {
+        console.error("Error fetching admin data:", error);
         setIsAuthenticated(false);
         setUser({});
       }
