@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await axios
+      const response = await axios
         .post(
           "https://appointment-app-yior.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Student" },
@@ -24,16 +24,17 @@ const Login = () => {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
           }
-        )
-        .then((res) => {
-          toast.success(res.data.message);
+        );
+        console.log("Login response:", response.data);
+          toast.success(response.data.message);
           setIsAuthenticated(true);
+          localStorage.setItem('authToken', response.data.token);
           navigateTo("/");
           setEmail("");
           setPassword("");
           setConfirmPassword("");
-        });
     } catch (error) {
+      console.error("Login error:", error.response.data);
       toast.error(error.response.data.message);
     }
   };
